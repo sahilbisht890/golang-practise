@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	mainFunc()
+	// mainFunc()
+	loopMain()
 }
 
 func basic1() {
