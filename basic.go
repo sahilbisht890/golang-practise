@@ -7,7 +7,9 @@ import (
 func main() {
 	// mainFunc()
 	// loopMain()
-	funcMain()
+	// funcMain()
+	// stuctMain()
+	mapFunc()
 }
 
 func basic1() {
