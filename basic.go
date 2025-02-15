@@ -6,7 +6,8 @@ import (
 
 func main() {
 	// mainFunc()
-	loopMain()
+	// loopMain()
+	funcMain()
 }
 
 func basic1() {
