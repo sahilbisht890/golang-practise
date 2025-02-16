@@ -10,7 +10,8 @@ func main() {
 	// funcMain()
 	// stuctMain()
 	// mapFunc()
-	arrayQuestionMain()
+	// arrayQuestionMain()
+	stringFunc()
 }
 
 func basic1() {

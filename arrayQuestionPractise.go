@@ -8,10 +8,10 @@ import (
 func arrayQuestionMain() {
 	var arr = []int{42, 12, 89, 43, 12, 89}
 
-	fmt.Println("Array is: ", twoSum([]int{2, 11, 8, 44, 12, 3, 13, 7, 15}, 26))
-	fmt.Println("Array is: ", twoSumIndex([]int{2, 11, 8, 44, 12, 3, 13, 7, 15}, 26))
-	fmt.Println("Merged Sorted Array", mergeSortedArray([]int{4, 12, 13, 20}, []int{1, 10, 14, 18, 19}))
-
+	// fmt.Println("Array is: ", twoSum([]int{2, 11, 8, 44, 12, 3, 13, 7, 15}, 26))
+	// fmt.Println("Array is: ", twoSumIndex([]int{2, 11, 8, 44, 12, 3, 13, 7, 15}, 26))
+	// fmt.Println("Merged Sorted Array", mergeSortedArray([]int{4, 12, 13, 20}, []int{1, 10, 14, 18, 19}))
+	fmt.Println("majority Element", majorityElement([]int{1, 2, 1, 2, 2, 1, 1, 1, 1}))
 	secondLargest(arr)
 }
 
@@ -110,4 +110,27 @@ func mergeSortedArray(arr1 []int, arr2 []int) []int {
 	}
 
 	return mergedArray
+}
+
+// Given an array nums of size n, return the majority element.
+// The majority element is the element that appears more than ⌊n / 2⌋ times.
+// You may assume that the majority element always exists in the array.
+
+func majorityElement(arr []int) (result int) {
+	result = arr[0]
+	var count = 1
+	for i := 1; i < len(arr); i++ {
+		if count == 0 {
+			result = arr[i]
+			count = 1
+			continue
+		}
+		if arr[i] == result {
+			count++
+		} else {
+			count--
+		}
+	}
+
+	return
 }
